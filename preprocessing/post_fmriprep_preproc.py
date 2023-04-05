@@ -71,7 +71,8 @@ subject_ts_paths = get_ts_paths(subject)
 
 parcellated_ts = parcellate(subject_ts_paths, confounds)
 clean_parcellated_ts = clean_signal(parcellated_ts)
-clean_parcellated_ts = np.row_stack(clean_parcellated_ts)
+clean_parcellated_ts = np.stack(clean_parcellated_ts)
+
 print('Shape of the timeseries: ', clean_parcellated_ts.shape)
 
 output_dir = f'{data_path}/clean_data/{group}/schaefer{n_parcels}/sub-{subject}/func'

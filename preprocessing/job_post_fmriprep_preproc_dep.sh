@@ -20,4 +20,4 @@ SUBJECT_LIST=/gpfs3/well/margulies/projects/data/MDD_bezmaternykh/"${group}"/Bez
 sub=$(sed -n "${SLURM_ARRAY_TASK_ID}p" $SUBJECT_LIST)
 n_parcels=1000
 
-python -u post_fmriprep_preproc_dep.py $sub $n_parcels $group
+python -u post_fmriprep_preproc.py $sub $n_parcels $group
